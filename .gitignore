@@ -1,0 +1,11 @@
+node_modules/
+reports/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+.env
+.DS_Store
+
+# Private coaching journey — never commit
+journey/

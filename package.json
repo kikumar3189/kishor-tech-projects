@@ -1,0 +1,40 @@
+{
+  "name": "grip-partner-portal-e2e",
+  "version": "0.1.0",
+  "description": "End-to-end test automation framework for the Grip Partner Portal (Cucumber + Playwright + Node.js)",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "cucumber-js",
+    "test:smoke": "cucumber-js --profile smoke",
+    "test:headed": "HEADED=1 cucumber-js",
+    "test:dry": "cucumber-js --profile dry",
+    "test:pw": "playwright test",
+    "test:pw:smoke": "playwright test --grep @smoke",
+    "test:pw:headed": "playwright test --headed",
+    "test:pw:debug": "playwright test --debug",
+    "test:pw:ui": "playwright test --ui",
+    "report": "open reports/cucumber/report.html",
+    "report:pw": "playwright show-report reports/html",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "browsers:install": "playwright install --with-deps chromium",
+    "progress": "node scripts/progress.js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "dotenv": "^18.0.8",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.12.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10"
+  }
+}
